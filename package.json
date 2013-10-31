@@ -1,0 +1,27 @@
+{
+  "name": "fuzzyblanket",
+  "version": "0.0.0",
+  "description": "todo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "fuzzyblanket": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DTrejo/fuzzyblanket.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "David Trejo",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/DTrejo/fuzzyblanket/issues"
+  },
+  "dependencies": {
+    "optimist": "~0.6.0"
+  }
+}
