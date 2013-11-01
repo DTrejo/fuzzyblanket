@@ -1,7 +1,7 @@
 {
   "name": "fuzzyblanket",
   "version": "0.0.1",
-  "description": "todo",
+  "description": "sets up your project to use alexseville/blanket according to the node.js instructions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,7 @@
     "url": "git://github.com/DTrejo/fuzzyblanket.git"
   },
   "keywords": [
-    "todo"
+    "coverage", "jscoverage", "istanbul", "blanket", "mocha", "test"
   ],
   "author": "David Trejo",
   "license": "BSD-2-Clause",
