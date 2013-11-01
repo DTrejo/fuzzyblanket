@@ -17,15 +17,15 @@ var fs = require('fs')
 var path = require('path')
 var exec = require('child_process').exec
 
-var argv = require('optimist')
-    .usage('Usage: $0 --code your/source/code [--package your/npm/module]')
+var opt = require('optimist')
+    .usage('Usage: $0 [--code your/source/code] [--package your/npm/module]')
     .default({
       'code': path.join(process.cwd(), 'lib'),
       'package': process.cwd()
     })
     .describe({
-      'code': 'the location of your source files; do not include your tests! e.g. "lib" or "src"',
-      'package': 'a path to the npm package to which you want to add `blanket`. defaults to the current directory, "."',
+      'code': 'the location of your source files; do not include your tests!',
+      'package': 'a path to the npm package to which you want to add `blanket`.',
       'force': 'overwrite the scripts.posttest and scripts.blanket fields in package.json',
       'preview': 'see what changes will be made to your package.json without making them'
     })
@@ -35,7 +35,9 @@ var argv = require('optimist')
       'force': 'f'
     })
     .wrap(80)
-    .argv
+var argv = opt.argv
+
+if (argv.help || argv.h) return opt.showHelp()
 
 argv.code = path.resolve(argv.package, argv.code)
 
